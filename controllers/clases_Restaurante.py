@@ -77,7 +77,8 @@ class Programa():
     # CLIENTES
     
     def agregar_cliente(self,nombre,contacto,estado, foto):
-        if self.buscar_cliente != False:            
+        print("llegto")
+        if self.buscar_cliente(contacto) == False:            
             cliente = Cliente(nombre,contacto,estado,foto)
             self.clientes.append(cliente)
             print('cliente añadido con exito')
@@ -94,8 +95,14 @@ class Programa():
                 break
             
     def buscar_cliente(self, contacto):
-        clientes_filtrados = filter(lambda i: i.contacto == contacto, self.clientes)
-        return next(clientes_filtrados, False)
+        
+        # clientes_filtrados = filter(lambda i: i.contacto == contacto, self.clientes)
+        # print(contacto)
+        # return next(clientes_filtrados, False)
+        for i in self.clientes:
+            if i.contacto == contacto:
+                return i
+        return False
     
     def dar_puntosCliente(self,contacto):
         if i := self.buscar_cliente(contacto):

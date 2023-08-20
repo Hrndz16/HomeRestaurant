@@ -3,10 +3,11 @@ from controllers.clases_Restaurante import Programa
 from PySide6.QtWidgets import QDialog,QFileDialog
 from PySide6.QtCore import Qt
 from PySide6.QtGui import QPixmap,QIntValidator
+import os
 
 class DialogAgregarCliente(QDialog, Ui_Dialog_agregar_cliente):
     
-    def __init__(self,lista):
+    def __init__(self,lista=Programa()):
         super().__init__()
         self.setupUi(self)
         self.menuBar_frame_2.mouseMoveEvent = self.moveWindow
@@ -14,37 +15,21 @@ class DialogAgregarCliente(QDialog, Ui_Dialog_agregar_cliente):
         self.change_pictur_botton.clicked.connect(self.open_file_dialog)
         self.cc_lineEdit.setValidator(QIntValidator())
         self.lista = lista
-        self.pixmap = QPixmap()
+        self.file_name= os.path.join('assets','icons','icons8-usuario-80.png')
+        self.pixmap = QPixmap(self.file_name)
         
         
-        
-        
-        
-    def agregar_cliente(self):
-        nombre = self.name_lineEdit.text()
-        cedula = self.cc_lineEdit.text()
-        foto=self.pixmap
-        if self.normal_radioButton.isChecked():
-            tipo = "Normal"
-        else:
-            tipo = "Preferencial"
-        
-        
-        self.add_pushButton.clicked.connect(lambda: self.registrar_cliente(nombre,cedula,tipo,foto))
-        
-    def registrar_cliente(self,nombre, cedula, tipo, foto):
-        self.lista.agregar_cliente(nombre, cedula, tipo, foto)
-        self.close()
+
         
     def open_file_dialog(self):
         options = QFileDialog.Options()
         options |= QFileDialog.ReadOnly
 
-        file_name, _ = QFileDialog.getOpenFileName(self, "Seleccionar Imagen", "", "Imágenes (*.png *.jpg *.jpeg *.bmp *.gif);;Todos los archivos (*)", options=options)
+        self.file_name, _ = QFileDialog.getOpenFileName(self, "Seleccionar Imagen", "", "Imágenes (*.png *.jpg *.jpeg *.bmp *.gif);;Todos los archivos (*)", options=options)
 
-        if file_name:
-            self.pixmap = QPixmap(file_name) 
-            self.picture_label.setPixmap(self.pixmap)
+        if self.file_name:
+            pixmap = QPixmap(self.file_name) 
+            self.picture_label.setPixmap(pixmap)
 
     def mousePressEvent(self,event):
         self.clickPosition = event.globalPos()

@@ -41,20 +41,49 @@ class MainWindowForm(QMainWindow,Ui_MainWindow):
 
         self.custumer_add_botton.clicked.connect(self.openAgregar_cliente)
         self.custumer_del_botton.clicked.connect(self.openEliminar_cliente)
+        
+
     
     def openEliminar_cliente(self):
         dialog = eliminar_cliente(self.listas)
         general_configuracion(dialog)
+        
+        
+        dialog.add_pushButton.clicked.connect(lambda: self.eliminarCliente(dialog) )
+        
+        self.guardar_datos(self.listas)
         dialog.exec()
-
+    
+    def eliminarCliente(self,dialog):
+        cliente=dialog.eliminarCliente()
+        self.listas.eliminar_cliente(cliente)
+        
     def openAgregar_cliente(self):
         dialog = DialogAgregarCliente(self.listas)
         general_configuracion(dialog)
-        dialog.agregar_cliente()
-        dialog.exec()
+        dialog.add_pushButton.clicked.connect(lambda: self.guardardatoscliente(dialog) )
         
-
-
+        dialog.exec()
+        type(self.listas)
+        
+    def guardardatoscliente(self,dialog):
+        nombre = dialog.name_lineEdit.text()
+        print(nombre)
+        contacto = dialog.cc_lineEdit.text()
+        print(contacto)
+        foto=dialog.file_name
+        print(foto)
+        if dialog.normal_radioButton.isChecked():
+            tipo = "Normal"
+        else:
+            tipo = "Preferencial"
+        
+        self.listas.agregar_cliente(nombre=nombre, contacto=contacto, estado=tipo, foto=foto)
+        self.guardar_datos(self.listas)
+        
+        dialog.close()
+        
+        
     def start(self):
         self.progressBar.setVisible(True)
         self.progressBar.setValue(0)
@@ -78,6 +107,7 @@ class MainWindowForm(QMainWindow,Ui_MainWindow):
     def guardar_datos(self,programa):
         with open(archivo, 'wb') as f:
             pickle.dump(programa, f)
+        print("entro")
             
     def cargar_datos(self):
         ruta= os.path.join("database", "archivo.pkl")
