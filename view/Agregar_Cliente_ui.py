@@ -21,16 +21,36 @@ from PySide6.QtWidgets import (QApplication, QDialog, QFrame, QGridLayout,
 import icons_rc
 import icons_rc
 
-class Ui_Dialog(object):
-    def setupUi(self, Dialog):
-        if not Dialog.objectName():
-            Dialog.setObjectName(u"Dialog")
-        Dialog.resize(340, 473)
-        self.verticalLayout = QVBoxLayout(Dialog)
+class Ui_Dialog_agregar_cliente(object):
+    def mousePressEvent(self,event):
+        self.clickPosition = event.globalPos()
+    def setupUi(self, Dialog_agregar_cliente):
+        if not Dialog_agregar_cliente.objectName():
+            Dialog_agregar_cliente.setObjectName(u"Dialog_agregar_cliente")
+        Dialog_agregar_cliente.resize(340, 513)
+        self.verticalLayout = QVBoxLayout(Dialog_agregar_cliente)
         self.verticalLayout.setSpacing(0)
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.verticalLayout.setContentsMargins(0, 0, 0, 0)
-        self.central_frame = QFrame(Dialog)
+        self.menuBar_frame_2 = QFrame(Dialog_agregar_cliente)
+        self.menuBar_frame_2.setObjectName(u"menuBar_frame_2")
+        self.menuBar_frame_2.setMinimumSize(QSize(0, 40))
+        self.menuBar_frame_2.setMaximumSize(QSize(16777215, 40))
+        self.menuBar_frame_2.setStyleSheet(u"QFrame#menuBar_frame_2{\n"
+"background-color: rgb(173, 216, 230);\n"
+"border-top-left-radius: 10px;\n"
+"}\n"
+"")
+        self.menuBar_frame_2.setFrameShape(QFrame.StyledPanel)
+        self.menuBar_frame_2.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_5 = QHBoxLayout(self.menuBar_frame_2)
+        self.horizontalLayout_5.setSpacing(6)
+        self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")
+        self.horizontalLayout_5.setContentsMargins(9, 11, 15, 0)
+
+        self.verticalLayout.addWidget(self.menuBar_frame_2)
+
+        self.central_frame = QFrame(Dialog_agregar_cliente)
         self.central_frame.setObjectName(u"central_frame")
         self.central_frame.setStyleSheet(u"QFrame#central_frame{\n"
 "	border: 3px solid rgb(173, 216, 230); /* Bordes gruesos de color RGB(173, 216, 230) */\n"
@@ -199,22 +219,22 @@ class Ui_Dialog(object):
         self.verticalLayout.addWidget(self.central_frame)
 
 
-        self.retranslateUi(Dialog)
+        self.retranslateUi(Dialog_agregar_cliente)
 
-        QMetaObject.connectSlotsByName(Dialog)
+        QMetaObject.connectSlotsByName(Dialog_agregar_cliente)
     # setupUi
 
-    def retranslateUi(self, Dialog):
-        Dialog.setWindowTitle(QCoreApplication.translate("Dialog", u"Dialog", None))
+    def retranslateUi(self, Dialog_agregar_cliente):
+        Dialog_agregar_cliente.setWindowTitle(QCoreApplication.translate("Dialog_agregar_cliente", u"Dialog", None))
         self.picture_label.setText("")
-        self.change_pictur_botton.setText(QCoreApplication.translate("Dialog", u"Subir Foto", None))
-        self.name_label.setText(QCoreApplication.translate("Dialog", u"Nombre:", None))
-        self.cc_label.setText(QCoreApplication.translate("Dialog", u"Cedula:", None))
-        self.normal_label.setText(QCoreApplication.translate("Dialog", u"Cliente Normal", None))
-        self.pro_label.setText(QCoreApplication.translate("Dialog", u"Cliente Preferencial", None))
+        self.change_pictur_botton.setText(QCoreApplication.translate("Dialog_agregar_cliente", u"Subir Foto", None))
+        self.name_label.setText(QCoreApplication.translate("Dialog_agregar_cliente", u"Nombre:", None))
+        self.cc_label.setText(QCoreApplication.translate("Dialog_agregar_cliente", u"Cedula:", None))
+        self.normal_label.setText(QCoreApplication.translate("Dialog_agregar_cliente", u"Cliente Normal", None))
+        self.pro_label.setText(QCoreApplication.translate("Dialog_agregar_cliente", u"Cliente Preferencial", None))
         self.pro_radioButton.setText("")
         self.normal_radioButton.setText("")
-        self.add_pushButton.setText(QCoreApplication.translate("Dialog", u"Agregar", None))
-        self.cancel_pushButton.setText(QCoreApplication.translate("Dialog", u"Cancelar", None))
+        self.add_pushButton.setText(QCoreApplication.translate("Dialog_agregar_cliente", u"Agregar", None))
+        self.cancel_pushButton.setText(QCoreApplication.translate("Dialog_agregar_cliente", u"Cancelar", None))
     # retranslateUi
 

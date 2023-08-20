@@ -22,7 +22,7 @@ from PySide6.QtWidgets import (QApplication, QComboBox, QDialog, QFrame,
 import icons_rc
 import fotos_rc
 
-class Ui_Dialog(object):
+class Ui_Dialog_admin_facturas(object):
     def setupUi(self, Dialog):
         if not Dialog.objectName():
             Dialog.setObjectName(u"Dialog")

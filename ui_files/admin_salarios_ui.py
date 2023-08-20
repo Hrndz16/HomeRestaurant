@@ -179,7 +179,7 @@ class Ui_Dialog(object):
         self.gridLayout_3.addWidget(self.cancel_pushButton, 0, 2, 2, 1)
 
 
-        self.gridLayout_2.addWidget(self.buttons_frame, 2, 0, 1, 1)
+        self.gridLayout_2.addWidget(self.buttons_frame, 3, 0, 1, 1)
 
         self.frame = QFrame(self.central_frame)
         self.frame.setObjectName(u"frame")
@@ -213,7 +213,7 @@ class Ui_Dialog(object):
         self.gridLayout_4.addWidget(self.label_4, 2, 0, 1, 1)
 
 
-        self.gridLayout_2.addWidget(self.frame, 1, 0, 1, 1)
+        self.gridLayout_2.addWidget(self.frame, 2, 0, 1, 1)
 
         self.frame_2 = QFrame(self.central_frame)
         self.frame_2.setObjectName(u"frame_2")
@@ -233,7 +233,7 @@ class Ui_Dialog(object):
         self.gridLayout.addWidget(self.label_2, 0, 1, 1, 1)
 
 
-        self.gridLayout_2.addWidget(self.frame_2, 0, 0, 1, 1, Qt.AlignHCenter)
+        self.gridLayout_2.addWidget(self.frame_2, 1, 0, 1, 1, Qt.AlignHCenter)
 
 
         self.verticalLayout.addWidget(self.central_frame)

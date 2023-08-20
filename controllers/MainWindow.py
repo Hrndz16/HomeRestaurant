@@ -1,18 +1,22 @@
-from PySide6.QtWidgets import QMainWindow,QWidget
-from view.MainWindow2_ui import *
-from view.general_configuracion import *
+
+from PySide6.QtWidgets import QMainWindow
+from view.MainWindow2_ui import Ui_MainWindow
+from view.general_configuracion import general_configuracion
+from controllers.clases_Restaurante import Programa
 from PySide6.QtCore import Qt
 import time
+from controllers.clases_Restaurante import *
+from controllers.agregar_cliente import DialogAgregarCliente
+from controllers.eliminar_cliente import eliminar_cliente
 
-class MainWindowForm(QMainWindow,Ui_MainWindow,QWidget):
+class MainWindowForm(QMainWindow,Ui_MainWindow):
     def __init__(self):
+        self.listas = cargar_datos()
         super().__init__()
         self.setupUi(self)
         self.ui = general_configuracion(self)
         self.menuBar_frame.mouseMoveEvent = self.moveWindow
         self.menuBar_frame_2.mouseMoveEvent = self.moveWindow
-        
-        print("hola")
         
         
         self.menu_1.clicked.connect(lambda: self.pages_menu.setCurrentIndex(0))
@@ -35,7 +39,22 @@ class MainWindowForm(QMainWindow,Ui_MainWindow,QWidget):
         
         self.pages_menu.setCurrentIndex(0)
 
+        self.custumer_add_botton.clicked.connect(self.openAgregar_cliente)
+        self.custumer_del_botton.clicked.connect(self.openEliminar_cliente)
     
+    def openEliminar_cliente(self):
+        dialog = eliminar_cliente(self.listas)
+        general_configuracion(dialog)
+        dialog.exec()
+
+    def openAgregar_cliente(self):
+        dialog = DialogAgregarCliente(self.listas)
+        general_configuracion(dialog)
+        dialog.agregar_cliente()
+        dialog.exec()
+        
+
+
     def start(self):
         self.progressBar.setVisible(True)
         self.progressBar.setValue(0)
@@ -56,4 +75,21 @@ class MainWindowForm(QMainWindow,Ui_MainWindow,QWidget):
             event.accept()
     
     
+    def guardar_datos(self,programa):
+        with open(archivo, 'wb') as f:
+            pickle.dump(programa, f)
+            
+    def cargar_datos(self):
+        ruta= os.path.join("database", "archivo.pkl")
+        archivo = ruta
+        try:
+            with open(archivo, 'rb') as f:  # Cambio: modo 'rb' para leer binario
+                programa = pickle.load(f)
+                return programa
+        except (FileNotFoundError, pickle.UnpicklingError):
+            print(f"El archivo '{archivo}' no existe o no se puede cargar. Se creará uno nuevo.")
+            programa_nuevo = Programa()
+            guardar_datos(programa_nuevo)  # Crear y guardar un nuevo archivo
+            return programa_nuevo
+        
         

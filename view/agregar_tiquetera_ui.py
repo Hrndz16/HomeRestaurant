@@ -22,7 +22,7 @@ from PySide6.QtWidgets import (QApplication, QComboBox, QDateEdit, QDialog,
 import icons_rc
 import icons_rc
 
-class Ui_Dialog(object):
+class Ui_Dialog_agregar_tiquetera(object):
     def setupUi(self, Dialog):
         if not Dialog.objectName():
             Dialog.setObjectName(u"Dialog")

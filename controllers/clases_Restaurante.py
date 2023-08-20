@@ -1,7 +1,9 @@
 from PySide6.QtWidgets import QApplication, QWidget, QVBoxLayout, QPushButton, QProgressDialog
+from PySide6.QtGui import QPixmap
 import sys, time, pickle
 import datetime
 from PySide6.QtCore import Qt
+import os
 
 class Factura:
     def __init__(self):
@@ -42,10 +44,11 @@ class Factura:
     
     
 class Cliente:
-    def __init__(self, nombre, contacto,estado):
+    def __init__(self, nombre, contacto,estado,foto):
         self.nombre = nombre
         self.contacto = contacto
         self.estado = estado# nomal o preferencial
+        self.foto= foto
 
     def realizar_orden(self, orden):
         self.historial_ordenes.append(orden)
@@ -73,9 +76,9 @@ class Programa():
         
     # CLIENTES
     
-    def añadir_cliente(self,nombre,contacto):
+    def agregar_cliente(self,nombre,contacto,estado, foto):
         if self.buscar_cliente != False:            
-            cliente = Cliente(nombre,contacto)
+            cliente = Cliente(nombre,contacto,estado,foto)
             self.clientes.append(cliente)
             print('cliente añadido con exito')
             
@@ -442,8 +445,8 @@ def cargar_datos():
         programa_nuevo = Programa()
         guardar_datos(programa_nuevo)  # Crear y guardar un nuevo archivo
         return programa_nuevo
-            
-archivo = 'restauante.pkl'
+ruta= os.path.join("database", "archivo")
+archivo = ruta
 
 if __name__ == "__main__":
     main()

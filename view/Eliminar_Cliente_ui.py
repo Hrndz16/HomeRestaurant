@@ -30,6 +30,24 @@ class Ui_Dialog(object):
         self.verticalLayout.setSpacing(0)
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.verticalLayout.setContentsMargins(0, 0, 0, 0)
+        self.menuBar_frame_2 = QFrame(Dialog)
+        self.menuBar_frame_2.setObjectName(u"menuBar_frame_2")
+        self.menuBar_frame_2.setMinimumSize(QSize(0, 40))
+        self.menuBar_frame_2.setMaximumSize(QSize(16777215, 40))
+        self.menuBar_frame_2.setStyleSheet(u"QFrame#menuBar_frame_2{\n"
+"background-color: rgb(173, 216, 230);\n"
+"border-top-left-radius: 10px;\n"
+"}\n"
+"")
+        self.menuBar_frame_2.setFrameShape(QFrame.StyledPanel)
+        self.menuBar_frame_2.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_5 = QHBoxLayout(self.menuBar_frame_2)
+        self.horizontalLayout_5.setSpacing(6)
+        self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")
+        self.horizontalLayout_5.setContentsMargins(9, 11, 15, 0)
+
+        self.verticalLayout.addWidget(self.menuBar_frame_2)
+
         self.central_frame = QFrame(Dialog)
         self.central_frame.setObjectName(u"central_frame")
         self.central_frame.setStyleSheet(u"QFrame#central_frame{\n"

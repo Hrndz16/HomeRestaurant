@@ -1633,7 +1633,7 @@ class Ui_MainWindow(object):
         self.Title_funcion_label_25 = QLabel(self.add_frame_6)
         self.Title_funcion_label_25.setObjectName(u"Title_funcion_label_25")
         self.Title_funcion_label_25.setFont(font1)
-        self.Title_funcion_label_25.setStyleSheet(u"word-wrap: break-word;")
+        
 
         self.verticalLayout_37.addWidget(self.Title_funcion_label_25, 0, Qt.AlignHCenter)
 
