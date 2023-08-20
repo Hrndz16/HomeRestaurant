@@ -12,6 +12,9 @@ class MainWindowForm(QMainWindow,Ui_MainWindow,QWidget):
         self.menuBar_frame.mouseMoveEvent = self.moveWindow
         self.menuBar_frame_2.mouseMoveEvent = self.moveWindow
         
+        print("hola")
+        
+        
         self.menu_1.clicked.connect(lambda: self.pages_menu.setCurrentIndex(0))
         self.menu_2.clicked.connect(lambda: self.pages_menu.setCurrentIndex(1))
         self.menu_3.clicked.connect(lambda: self.pages_menu.setCurrentIndex(2))

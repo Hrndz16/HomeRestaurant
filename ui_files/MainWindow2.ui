@@ -1002,7 +1002,7 @@ background-color: white;
               <item>
                <widget class="QStackedWidget" name="pages_menu">
                 <property name="currentIndex">
-                 <number>1</number>
+                 <number>2</number>
                 </property>
                 <widget class="QWidget" name="inicio_page">
                  <layout class="QHBoxLayout" name="horizontalLayout_6">
@@ -1082,6 +1082,9 @@ background-color: rgb(173, 216, 230);
                      <enum>QFrame::Raised</enum>
                     </property>
                     <layout class="QHBoxLayout" name="horizontalLayout_9">
+                     <property name="leftMargin">
+                      <number>9</number>
+                     </property>
                      <item>
                       <widget class="QFrame" name="frame">
                        <property name="frameShape">
