@@ -1,0 +1,48 @@
+<RCC>
+  <qresource prefix="icons">
+    <file>assets/icons/icons8-usuario-80.png</file>
+    <file>assets/icons/icons8-recibo-96.png</file>
+    <file>assets/icons/icons8-efectivo-96.png</file>
+    <file>assets/icons/icons8-mover-por-carretilla-96 (2).png</file>
+    <file>assets/icons/icons8-mover-por-carretilla-96 (1).png</file>
+    <file>assets/icons/icons8-mover-por-carretilla-96.png</file>
+    <file>assets/icons/icons8-products-pile-96.png</file>
+    <file>assets/icons/icons8-vendedor-96.png</file>
+    <file>assets/icons/icons8-vendedor-96 (1).png</file>
+    <file>assets/icons/icons8-vendedor-96 (2).png</file>
+    <file>assets/icons/icons8-vendedor-96 (3).png</file>
+    <file>assets/icons/icons8-vendedor-96 (4).png</file>
+    <file>assets/icons/icons8-eliminar-boleto-96.png</file>
+    <file>assets/icons/icons8-añadir-entrada-96.png</file>
+    <file>assets/icons/icons8-boleto-96 (1).png</file>
+    <file>assets/icons/icons8-boleto-96.png</file>
+    <file>assets/icons/icons8-users-96.png</file>
+    <file>assets/icons/icons8-añadir-grupo-de-usuarios-hombre-hombre-96.png</file>
+    <file>assets/icons/icons8-editar-usuario-masculino-96.png</file>
+    <file>assets/icons/icons8-find-user-male-96.png</file>
+    <file>assets/icons/icons8-retire-hombre-usuario-96.png</file>
+    <file>assets/icons/icons8-pequeña-empresa-100.png</file>
+    <file>assets/icons/icons8-proveedor-64.png</file>
+    <file>assets/icons/icons8-boleto-100.png</file>
+    <file>assets/icons/icons8-cliente-100.png</file>
+    <file>assets/icons/icons8-cuentas-100.png</file>
+    <file>assets/icons/icons8-descuento-100.png</file>
+    <file>assets/icons/icons8-empleados-100.png</file>
+    <file>assets/icons/icons8-página-principal-100.png</file>
+    <file>assets/icons/icons8-producto-100.png</file>
+    <file>assets/icons/icons8-restaurante-50.png</file>
+    <file>assets/icons/icons8-minimizar-50.png</file>
+    <file>assets/icons/icons8-cerrar-ventana-50.png</file>
+    <file>assets/icons/cancel.png</file>
+    <file>assets/icons/close-window.png</file>
+    <file>assets/icons/delete.png</file>
+    <file>assets/icons/edit.png</file>
+    <file>assets/icons/open-file.png</file>
+    <file>assets/icons/icons8-menú-100.png</file>
+    <file>assets/icons/plus.png</file>
+    <file>assets/icons/restore-window.png</file>
+    <file>assets/icons/search.png</file>
+    <file>assets/icons/Start_Icon.png</file>
+    <file>assets/icons/view.png</file>
+  </qresource>
+</RCC>

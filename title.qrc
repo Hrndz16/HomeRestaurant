@@ -1,0 +1,9 @@
+<RCC>
+  <qresource prefix="title">
+    <file>pictures/images.jpeg</file>
+    <file>assets/icons/icons8-botón-de-apagado-50.png</file>
+    <file>pictures/imagen_2023-08-18_174048193-removebg-preview.png</file>
+    <file>pictures/IMAGE TITLE.png</file>
+    <file>pictures/background.png</file>
+  </qresource>
+</RCC>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>290</width>
+    <height>253</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QFrame" name="central_frame">
+     <property name="styleSheet">
+      <string notr="true">QFrame#central_frame{
+	border: 3px solid rgb(173, 216, 230); /* Bordes gruesos de color RGB(173, 216, 230) */
+    background-color: rgb(240, 240, 240)
+}
+
+/* Estilo para QLabel */
+QLabel {
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(50, 50, 50);
+    background-color: rgb(240, 240, 240);
+    padding: 10px;
+}
+
+/* Estilo para QPushButton */
+QPushButton {
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(173, 216, 230);
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+}
+
+/* Efecto al pasar el mouse sobre el botón */
+QPushButton:hover {
+    background-color: rgb(150, 200, 220);
+}
+
+/* Efecto al presionar el botón */
+QPushButton:pressed {
+    background-color: rgb(130, 180, 200);
+}
+/* Estilo para QLineEdit */
+QLineEdit {
+    font-size: 14px;
+    color: rgb(50, 50, 50);
+    background-color: rgb(240, 240, 240);
+    border: 2px solid rgb(173, 216, 230);
+    border-radius: 5px;
+    padding: 8px;
+}
+
+/* Estilo para QComboBox */
+QComboBox {
+    font-size: 14px;
+    color: rgb(50, 50, 50);
+    background-color: rgb(240, 240, 240);
+    border: 2px solid rgb(173, 216, 230);
+    border-radius: 5px;
+    padding: 8px;
+    min-width: 150px; /* Ancho mínimo para asegurar que se vean los elementos */
+}
+
+/* Estilo para el desplegable del QComboBox */
+QComboBox::drop-down {
+    background-color: rgb(220, 220, 220);
+    border: none;
+    border-radius: 5px;
+}
+
+/* Efecto al pasar el mouse sobre el QComboBox */
+QComboBox:hover {
+    border: 2px solid rgb(150, 200, 220);
+}
+
+</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QFrame" name="frame">
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_3">
+         <item>
+          <widget class="QLabel" name="label">
+           <property name="text">
+            <string>Seleccione el cliente a
+eliminar:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="comboBox"/>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="buttons_frame">
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QPushButton" name="add_pushButton">
+           <property name="text">
+            <string>Eliminar</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="cancel_pushButton">
+           <property name="text">
+            <string>Cancelar</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="../icons.qrc"/>
+  <include location="../icons.qrc"/>
+ </resources>
+ <connections/>
+</ui>

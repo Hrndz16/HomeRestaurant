@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="iconos">
+    <file>assets/icons/icons8-usuario-80.png</file>
+  </qresource>
+</RCC>

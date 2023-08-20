@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>340</width>
+    <height>473</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QFrame" name="central_frame">
+     <property name="styleSheet">
+      <string notr="true">QFrame#central_frame{
+	border: 3px solid rgb(173, 216, 230); /* Bordes gruesos de color RGB(173, 216, 230) */
+    background-color: rgb(240, 240, 240)
+}
+
+/* Estilo para QLabel */
+QLabel {
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(50, 50, 50);
+    background-color: rgb(240, 240, 240);
+    padding: 10px;
+}
+
+/* Estilo para QPushButton */
+QPushButton {
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(173, 216, 230);
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+}
+
+/* Efecto al pasar el mouse sobre el botón */
+QPushButton:hover {
+    background-color: rgb(150, 200, 220);
+}
+
+/* Efecto al presionar el botón */
+QPushButton:pressed {
+    background-color: rgb(130, 180, 200);
+}
+/* Estilo para QLineEdit */
+QLineEdit {
+    font-size: 14px;
+    color: rgb(50, 50, 50);
+    background-color: rgb(240, 240, 240);
+    border: 2px solid rgb(173, 216, 230);
+    border-radius: 5px;
+    padding: 8px;
+}
+
+/* Efecto al pasar el mouse sobre el QLineEdit */
+QLineEdit:hover {
+    border: 2px solid rgb(150, 200, 220);
+}
+
+/* Efecto al estar enfocado en el QLineEdit */
+QLineEdit:focus {
+    border: 2px solid rgb(50, 150, 220);
+}
+</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QFrame" name="picture_frame">
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_3">
+         <item alignment="Qt::AlignHCenter">
+          <widget class="QLabel" name="picture_label">
+           <property name="styleSheet">
+            <string notr="true">border: 5px solid rgb(173, 216, 230); /* Borde de color RGB(173, 216, 230) */
+    padding: 5px; /* Espaciado interno para separar el contenido del borde */</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap resource="../icons.qrc">:/icons/assets/icons/icons8-usuario-80.png</pixmap>
+           </property>
+          </widget>
+         </item>
+         <item alignment="Qt::AlignHCenter">
+          <widget class="QPushButton" name="change_pictur_botton">
+           <property name="layoutDirection">
+            <enum>Qt::RightToLeft</enum>
+           </property>
+           <property name="text">
+            <string>Subir Foto</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../icons.qrc">
+             <normaloff>:/icons/assets/icons/open-file.png</normaloff>:/icons/assets/icons/open-file.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="data_frame">
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_2">
+         <item row="0" column="0">
+          <widget class="QLabel" name="name_label">
+           <property name="text">
+            <string>Nombre:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="cc_label">
+           <property name="text">
+            <string>Cedula:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLineEdit" name="name_lineEdit"/>
+         </item>
+         <item row="2" column="1">
+          <widget class="QLineEdit" name="cc_lineEdit"/>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="stats_frame">
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QGridLayout" name="gridLayout">
+         <item row="0" column="0" alignment="Qt::AlignHCenter">
+          <widget class="QLabel" name="normal_label">
+           <property name="text">
+            <string>Cliente Normal</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0" alignment="Qt::AlignHCenter">
+          <widget class="QLabel" name="pro_label">
+           <property name="text">
+            <string>Cliente Preferencial</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1" alignment="Qt::AlignHCenter">
+          <widget class="QRadioButton" name="pro_radioButton">
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1" alignment="Qt::AlignHCenter">
+          <widget class="QRadioButton" name="normal_radioButton">
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="buttons_frame">
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QPushButton" name="add_pushButton">
+           <property name="text">
+            <string>Agregar</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="cancel_pushButton">
+           <property name="text">
+            <string>Cancelar</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="../icons.qrc"/>
+  <include location="../icons.qrc"/>
+ </resources>
+ <connections/>
+</ui>

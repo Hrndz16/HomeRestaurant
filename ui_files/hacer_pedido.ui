@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>861</width>
+    <height>513</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QFrame" name="menuBar_frame_2">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>40</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>40</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QFrame#menuBar_frame_2{
+background-color: rgb(173, 216, 230);
+border-top-left-radius: 10px;
+}
+</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_5">
+      <property name="spacing">
+       <number>6</number>
+      </property>
+      <property name="leftMargin">
+       <number>9</number>
+      </property>
+      <property name="topMargin">
+       <number>11</number>
+      </property>
+      <property name="rightMargin">
+       <number>15</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QFrame" name="central_frame">
+     <property name="styleSheet">
+      <string notr="true">QFrame#central_frame{
+	border: 3px solid rgb(173, 216, 230); /* Bordes gruesos de color RGB(173, 216, 230) */
+    background-color: rgb(240, 240, 240)
+}
+/* Estilo para QListWidget */
+QListWidget {
+    font-size: 14px;
+    color: rgb(50, 50, 50);
+    background-color: rgb(240, 240, 240);
+    border: 2px solid rgb(173, 216, 230);
+    border-radius: 5px;
+    padding: 8px;
+    min-width: 150px; /* Ancho mínimo para asegurar que se vean los elementos */
+}
+
+/* Efecto al pasar el mouse sobre un elemento en QListWidget */
+QListWidget::item:hover {
+    background-color: rgb(200, 220, 240);
+}
+
+/* Efecto al seleccionar un elemento en QListWidget */
+QListWidget::item:selected {
+    background-color: rgb(150, 200, 220);
+    color: white;
+}
+
+/* Estilo para QLabel */
+QLabel {
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(50, 50, 50);
+    background-color: rgb(240, 240, 240);
+    padding: 10px;
+}
+
+/* Estilo para QPushButton */
+QPushButton {
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(173, 216, 230);
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+}
+
+/* Efecto al pasar el mouse sobre el botón */
+QPushButton:hover {
+    background-color: rgb(150, 200, 220);
+}
+
+/* Efecto al presionar el botón */
+QPushButton:pressed {
+    background-color: rgb(130, 180, 200);
+}
+/* Estilo para QLineEdit */
+QLineEdit {
+    font-size: 14px;
+    color: rgb(50, 50, 50);
+    background-color: rgb(240, 240, 240);
+    border: 2px solid rgb(173, 216, 230);
+    border-radius: 5px;
+    padding: 8px;
+}
+
+/* Efecto al pasar el mouse sobre el QLineEdit */
+QLineEdit:hover {
+    border: 2px solid rgb(150, 200, 220);
+}
+
+/* Efecto al estar enfocado en el QLineEdit */
+QLineEdit:focus {
+    border: 2px solid rgb(50, 150, 220);
+}
+/* Estilo para QComboBox */
+QComboBox {
+    font-size: 14px;
+    color: rgb(50, 50, 50);
+    background-color: rgb(240, 240, 240);
+    border: 2px solid rgb(173, 216, 230);
+    border-radius: 5px;
+    padding: 8px;
+}
+
+/* Estilo para el desplegable del QComboBox */
+QComboBox::drop-down {
+    background-color: rgb(220, 220, 220);
+    border: none;
+    border-radius: 5px;
+}
+
+/* Efecto al pasar el mouse sobre el QComboBox */
+QComboBox:hover {
+    border: 2px solid rgb(150, 200, 220);
+}
+
+</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="2" column="0">
+       <widget class="QFrame" name="buttons_frame">
+        <property name="minimumSize">
+         <size>
+          <width>304</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QPushButton" name="add_pushButton_2">
+           <property name="text">
+            <string>Confirmar</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="cancel_pushButton">
+           <property name="text">
+            <string>Salir</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QFrame" name="frame">
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_4">
+         <item row="0" column="0" colspan="2">
+          <widget class="QListView" name="listView">
+           <property name="styleSheet">
+            <string notr="true">/* Estilo para QListWidget */
+QListWidget {
+    font-size: 14px;
+    color: rgb(50, 50, 50);
+    background-color: rgb(240, 240, 240);
+    border: 2px solid rgb(173, 216, 230);
+    border-radius: 5px;
+    padding: 8px;
+}
+
+/* Efecto al pasar el mouse sobre un elemento en QListWidget */
+QListWidget::item:hover {
+    background-color: rgb(200, 220, 240);
+}
+
+/* Efecto al seleccionar un elemento en QListWidget */
+QListWidget::item:selected {
+    background-color: rgb(150, 200, 220);
+    color: white;
+}
+</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0" colspan="2">
+          <widget class="QPushButton" name="add_pushButton">
+           <property name="text">
+            <string>Agregar</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLineEdit" name="lineEdit_2"/>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_3">
+           <property name="text">
+            <string>Numero de unidades</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QFrame" name="data_frame">
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QGridLayout" name="gridLayout">
+         <item row="0" column="0">
+          <widget class="QLabel" name="name_label">
+           <property name="text">
+            <string>De proveedor:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QComboBox" name="comboBox">
+           <property name="minimumSize">
+            <size>
+             <width>259</width>
+             <height>0</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="0" column="1" rowspan="3">
+       <widget class="QFrame" name="frame_2">
+        <property name="minimumSize">
+         <size>
+          <width>400</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">/* Estilo para QPlainTextEdit */
+QPlainTextEdit {
+    font-size: 14px;
+    color: rgb(50, 50, 50);
+    border-radius: 5px;
+    padding: 8px;
+}
+</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_3">
+         <item row="0" column="0">
+          <widget class="QLabel" name="label">
+           <property name="text">
+            <string>Factura</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="label_2">
+           <property name="text">
+            <string>Valor total:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QLineEdit" name="lineEdit"/>
+         </item>
+         <item row="1" column="0" colspan="2">
+          <widget class="QPlainTextEdit" name="plainTextEdit"/>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="../icons.qrc"/>
+  <include location="../icons.qrc"/>
+ </resources>
+ <connections/>
+</ui>
